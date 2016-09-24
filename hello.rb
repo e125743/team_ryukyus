@@ -8,5 +8,11 @@ get '/' do
   end
   
   @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 40, :sex => 1)
-  erb :item_ranking_man
+  erb :item_ranking
+end
+
+post '/confirm' do
+  
+  @rankings = RakutenWebService::Ichiba::Item.ranking(:age => params[:select_age], :sex => params[:select_sex])
+  erb :item_ranking
 end
