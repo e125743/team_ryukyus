@@ -26,7 +26,7 @@
       </tr>
       <% @rankings.each do |ranking| %>
       <tr>
-        <td><%= ranking.name %></td>
+        <td><a href=<%= ranking.url %>> <%= ranking.name %> </a></td>
         <td><%= ranking.price %></td>
       </tr>
       <% end %>
