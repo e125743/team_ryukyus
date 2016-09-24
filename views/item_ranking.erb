@@ -1,0 +1,33 @@
+<!--参考: https://github.com/k2works/sinatra_rakuten_api-->
+<div class="starter-template">
+<form method="post" action="confirm">
+<SELECT name="select_age">
+<OPTION value="0">指定なし</OPTION>
+<OPTION value="10">10</OPTION>
+<OPTION value="20">20</OPTION>
+<OPTION value="30">30</OPTION>
+<OPTION value="40">40</OPTION>
+<OPTION value="50">50</OPTION>
+</SELECT>
+代
+<SELECT name="select_sex">
+<OPTION value="2">指定なし</OPTION>
+<OPTION value="0">男性</OPTION>
+<OPTION value="1">女性</OPTION>
+</SELECT>
+のランキング
+<p><input type="submit" value="送信する"></p>
+<\form>
+    <table class="table table-hover">
+      <tr>
+        <th>商品名</th>
+        <th>値段</th>
+      </tr>
+      <% @rankings.each do |ranking| %>
+      <tr>
+        <td><%= ranking.name %></td>
+        <td><%= ranking.price %></td>
+      </tr>
+      <% end %>
+    </table>
+</div>
