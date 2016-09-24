@@ -8,5 +8,5 @@ get '/' do
   end
   
   @rankings = RakutenWebService::Item.ranking(:age => 40, :sex => 1)
-  erb :item_ranking
+  erb :item_ranking_man
 end
