@@ -1,3 +1,4 @@
+require 'rakuten_web_service'
 require 'sinatra'
 
 get '/' do 
